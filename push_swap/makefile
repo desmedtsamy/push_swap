@@ -6,7 +6,7 @@
 #    By: samy <samy@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/30 11:51:56 by sde-smed          #+#    #+#              #
-#    Updated: 2023/03/07 10:53:34 by samy             ###   ########.fr        #
+#    Updated: 2023/03/13 15:41:24 by samy             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,13 @@ NAME = push_swap
 
 SRCS	= 	src/push_swap.c\
 			src/utils.c\
-			src/sort.c
+			src/sort.c\
+			src/push.c\
+			src/swap.c\
+			src/rotate.c\
+			src/create_stack.c\
+			src/radix.c\
+			src/reverse_rotate.c
 
 LIB		= -L ./libft -lft
 LIBFT	= libft/

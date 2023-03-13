@@ -6,7 +6,7 @@
 /*   By: samy <samy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:06:52 by samy              #+#    #+#             */
-/*   Updated: 2023/03/10 15:23:59 by samy             ###   ########.fr       */
+/*   Updated: 2023/03/13 16:16:38 by samy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
+# include <limits.h>
 
 typedef struct s_data
 {
@@ -28,14 +29,14 @@ typedef struct s_stack
 	int		size;
 }	t_stack;
 
+void	quit(int is_normal, t_stack *stack);
+void	args_to_stack(t_stack *stack, char **num_str);
 void	sort(t_stack *list);
-int		check_is_sorted(t_stack *list);
-void	radix(t_stack *a);
+void	radix(t_stack *stack_a, t_stack *stack_b);
 
-void	print_stack_binary(t_stack stack);
+int		is_number(char *str);
+int		is_stack_contains(t_stack *stack, int num);
 void	print_stack(t_stack stack);
-t_data	*get_last(t_stack *stack);
-void	printBits(size_t const size, void const *const ptr);
 
 void	sa(t_stack *a);
 void	sb(t_stack *b);
